@@ -1,0 +1,179 @@
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.cont1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.cont1 h1:first-of-type {
+    font-weight: normal;
+    align-self: center;
+    margin-bottom: 0;
+    color: hsl(229, 6%, 66%);
+
+}
+
+.cont1  p {
+    width: 60%;
+    text-align: center;
+}
+
+.card1 p {
+    width: 90%;
+}
+
+h1:last-of-type {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: hsl(234, 12%, 34%);
+}
+
+h2 {
+    color: hsl(234, 12%, 34%);
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+}
+
+main {
+    width: 70%;
+    height: 70%;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-areas: 
+    ". a ."
+    "b a c"
+    "b d c"
+    ". d .";
+}
+
+.card1 {
+    grid-area: b;
+}
+.card2 {
+    grid-area: a;
+}
+.card3 {
+    grid-area: d;
+}
+.card4 {
+    grid-area: c;
+}
+
+
+.cont  {
+    width: 100%;
+    box-shadow: 0px -6px 10px 0px rgba(250,250,250,1);
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+ .card {
+    position: relative;
+
+}
+
+.card1::after {
+    background-color: hsl(180, 62%, 55%);
+}
+.card2::after {
+    background-color: hsl(0, 78%, 62%);
+}
+.card3::after {
+    background-color: hsl(34, 97%, 64%);
+}
+.card4::after {
+    background-color: hsl(212, 86%, 64%);
+}
+
+.cont::after {
+    border-radius: 8px 8px 0 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cont h2, p {
+    margin: 0;
+}
+
+.align-strt {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.align-end {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    height: 50%;
+}
+
+img {
+    width: 60px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    body {
+        height: 100%;
+    }
+    main {
+        display: grid;
+        width: 90%;
+        grid-template-areas: 
+    "b"
+    "a"
+    "d"
+    "c";
+    }
+
+    .cont1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .cont1 h1 {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    h1:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .cont1 p {
+        width: 90%;
+        font-size: 16px;
+    }
+}
